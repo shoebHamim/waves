@@ -8,7 +8,8 @@ import Nav from './Components/Nav';
 
 function App() {
   const [songs, setSongs] = useState(data())
-  const [currentSong, setCurrentSong] = useState(songs[0])
+
+  const [currentSong, setCurrentSong] = useState(songs[Math.floor(Math.random()*songs.length)])
   const [isPlaying, setIsPlaying] = useState(false)
   const audioRef = useRef(null);
   const [libraryStatus,setLibraryStatus]=useState(false)
