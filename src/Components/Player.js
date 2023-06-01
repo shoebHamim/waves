@@ -11,12 +11,6 @@ const Player = ({ audioRef, songs, currentSong, isPlaying, setIsPlaying, setCurr
   })
 
   const playSongHandler = async (e) => {
-    if (e === 'play') {
-      await audioRef.current.play()
-      setIsPlaying(true)
-      return
-    }
-
     if (isPlaying) {
       await audioRef.current.pause()
       setIsPlaying(false)
@@ -28,16 +22,20 @@ const Player = ({ audioRef, songs, currentSong, isPlaying, setIsPlaying, setCurr
   }
 
   const dragHandler = e => {
-    setSongInfo({ ...songInfo, currentTime: e.target.value })
+    const slider = Math.floor((e.target.value / songInfo.duration) * 100)
+    setSongInfo({ ...songInfo, currentTime: e.target.value,slider})
+    setIsPlaying(true)
     audioRef.current.currentTime = e.target.value;
-    if (!isPlaying) {
-      audioRef.current.play()
-      setIsPlaying(true)
-    }
+
 
   }
   // change song
   const changeSong = async (value) => {
+    setSongInfo({
+      currentTime: 0,
+      duration: 0,
+      slider: 0,
+    })
     let idx = songs.indexOf(currentSong)
     if (value === 'next') {
       await setCurrentSong(songs[(idx + 1) % songs.length])
@@ -62,7 +60,6 @@ const Player = ({ audioRef, songs, currentSong, isPlaying, setIsPlaying, setCurr
   }
   const onLoadplayHandler = (e) => {
     onTimeUpdateHandler(e)
-    console.log(isPlaying);
     if (isPlaying) {
       audioRef.current.play()
     }
@@ -100,7 +97,7 @@ const Player = ({ audioRef, songs, currentSong, isPlaying, setIsPlaying, setCurr
 
       </div>
       <audio
-        onLoadedMetadata={onLoadplayHandler} onEnded={songEndHandler} onTimeUpdate={onTimeUpdateHandler} ref={audioRef} src={currentSong.audio}></audio>
+        onCanPlay={onLoadplayHandler} onEnded={songEndHandler} onTimeUpdate={onTimeUpdateHandler} ref={audioRef} src={currentSong.audio}></audio>
     </div>
   );
 };

@@ -33,11 +33,20 @@
 
 input[type="range"]::-webkit-slider-thumb{
   -webkit-appearance: none;
+  background: transparent;
   height: 15px;
   width: 15px;
- 
- 
 }
+input[type="range"]::-moz-range-thumb{
+  -webkit-appearance: none;
+  background: none;
+  height: 15px;
+  width: 15px;
+}
+
+
+
+
 .track{
   margin: 0 1rem;
   width: 100%;

@@ -3,7 +3,6 @@ import React from 'react';
 
 const LibrarySong = ({ isPlaying, currentSong, song, setCurrentSong, audioRef, setIsPlaying }) => {
   const selectSongHandler = async () => {
-    setIsPlaying(false)
     await setCurrentSong(song)
     setIsPlaying(true)
   }
