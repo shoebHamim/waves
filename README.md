@@ -14,9 +14,11 @@ https://wave-music-player-demo.netlify.app/
 - Responsive design
 
 ## Technologies Used 
-<img src="./readmeLogo/react.png" alt="React" width="50" height="50">
-<img src="./readmeLogo/js.png" alt="js" width="50" height="50">
-<img src="./readmeLogo/scss.png" alt="scss" width="50" height="50">
+<div style="display: flex; ">
+  <img src="./readmeLogo/react.png" alt="React" width="50" height="50">
+  <img src="./readmeLogo/js.png" alt="JavaScript" width="50" height="50">
+  <img src="./readmeLogo/scss.png" alt="SCSS" width="50" height="50">
+</div>
 
 - React
 - Axios
