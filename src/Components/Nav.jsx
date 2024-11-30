@@ -5,9 +5,10 @@ import React from 'react';
 const Nav = ({libraryStatus,setLibraryStatus}) => {
   return (
     <nav>
-      <h1>
-        {/* <img src="wave-sound.png" alt="" /> */}
-        Waves</h1>
+      <div className='logo'>
+        <img src="wave-sound.png" alt="" height={"30px"}/>
+      <h1>Waves</h1>
+      </div>
       <button onClick={()=>setLibraryStatus(!libraryStatus)}>
         Library
         <FontAwesomeIcon icon={faMusic}></FontAwesomeIcon>

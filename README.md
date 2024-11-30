@@ -8,12 +8,15 @@ https://wave-music-player-demo.netlify.app/
 
 ## Features
 
-- Fetches song recommendations from the Spotify API
+- Fetches song recommendations from the Spotify API [Rapid API]
 - Displays song details including cover art, artist, and title
 - Play, pause, and navigate through songs
 - Responsive design
 
-## Technologies Used
+## Technologies Used 
+<img src="./readmeLogo/react.png" alt="React" width="50" height="50">
+<img src="./readmeLogo/js.png" alt="js" width="50" height="50">
+<img src="./readmeLogo/scss.png" alt="scss" width="50" height="50">
 
 - React
 - Axios

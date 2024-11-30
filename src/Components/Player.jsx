@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faAngleRight, faAngleLeft, faPause } from '@fortawesome/free-solid-svg-icons';
 
 const Player = ({ audioRef, songs, currentSong, isPlaying, setIsPlaying, setCurrentSong }) => {
-  // console.log(songs);
+
 
   const [songInfo, setSongInfo] = useState({
     currentTime: 0,
@@ -27,7 +27,6 @@ const Player = ({ audioRef, songs, currentSong, isPlaying, setIsPlaying, setCurr
     setSongInfo({ ...songInfo, currentTime: e.target.value,slider})
     setIsPlaying(true)
     audioRef.current.currentTime = e.target.value;
-
 
   }
   // change song
@@ -86,10 +85,7 @@ const Player = ({ audioRef, songs, currentSong, isPlaying, setIsPlaying, setCurr
 
           </div>
         </div>
-
         <p>{parseInt((songInfo.duration ? songInfo.duration : 0) / 60)}:{("0" + Math.floor((songInfo.duration ? songInfo.duration : 0) % 60)).slice(-2)}</p>
-
-
       </div>
       <div className="play-control">
         <FontAwesomeIcon onClick={(e) => changeSong('prev')} icon={faAngleLeft} size='2x'></FontAwesomeIcon>

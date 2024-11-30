@@ -3,6 +3,13 @@ nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  .logo{
+    display: flex;
+    align-items: center;
+  }
+  h1{
+    margin-left: 5px;
+  }
   button{
     z-index: 3;
     background: transparent;
@@ -15,6 +22,5 @@ nav{
       background: rgb(65, 65, 65);
       color: white;
     }
-
   }
 }
