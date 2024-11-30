@@ -2,7 +2,7 @@ import React from 'react';
 
 const Song = ({currentSong,isPlaying}) => {
   
-  console.log(currentSong.album.images[0]);
+  // console.log(currentSong.album.images[0]);
   return (
     <div className='song-container'>
       <img className={isPlaying?'spin':'none' } src={`${currentSong.album.images[0].url}`} alt="" />

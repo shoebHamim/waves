@@ -15,6 +15,7 @@ function App() {
   const [libraryStatus, setLibraryStatus] = useState(false);
 
   useEffect(() => {
+    console.log('fetching songs');
     const fetchSongs = async () => {
       setIsLoading(true);
       try {
@@ -37,7 +38,7 @@ function App() {
   }, []);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div className='loading'>Loading...</div>;
   }
 
   return (

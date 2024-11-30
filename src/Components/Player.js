@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faAngleRight, faAngleLeft, faPause } from '@fortawesome/free-solid-svg-icons';
 
 const Player = ({ audioRef, songs, currentSong, isPlaying, setIsPlaying, setCurrentSong }) => {
+  // console.log(songs);
 
   const [songInfo, setSongInfo] = useState({
     currentTime: 0,

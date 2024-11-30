@@ -9,12 +9,13 @@
   transition: all 0.5s ease;
   -webkit-tap-highlight-color: transparent;
 
-
 }
 .library-active{
   margin-left: 20%;
 }
-
+.loading{
+  text-align: center;
+}
 @import './player';
 @import './song';
 @import './library';
