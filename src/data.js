@@ -14,7 +14,7 @@ function chillHop() {
     {
       name: "Daylight",
       cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
+        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8fDA%3D",
       artist: "Aiguille",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9272",
       color: ["#EF8EA9", "#ab417f"],
@@ -61,7 +61,7 @@ function chillHop() {
       id: uuidv4(),
       active: false,
     },
-    //ADD MORE HERE
+
   ];
 }
 

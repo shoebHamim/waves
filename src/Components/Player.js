@@ -76,7 +76,7 @@ const Player = ({ audioRef, songs, currentSong, isPlaying, setIsPlaying, setCurr
 
       <div className="time-control">
         <p>{parseInt(songInfo.currentTime / 60)}:{("0" + (Math.floor(songInfo.currentTime) % 60)).slice(-2)}</p>
-        <div className="track" style={{ background: `linear-gradient(to right,${currentSong.color[0]},${currentSong.color[1]})` }}>
+        <div className="track" style={{ background: `linear-gradient(to right,,)` }}>
 
           <input onChange={dragHandler} min={0}
             max={songInfo.duration ? songInfo.duration : 0}
@@ -97,7 +97,7 @@ const Player = ({ audioRef, songs, currentSong, isPlaying, setIsPlaying, setCurr
 
       </div>
       <audio
-        onCanPlay={onLoadplayHandler} onEnded={songEndHandler} onTimeUpdate={onTimeUpdateHandler} ref={audioRef} src={currentSong.audio}></audio>
+        onCanPlay={onLoadplayHandler} onEnded={songEndHandler} onTimeUpdate={onTimeUpdateHandler} ref={audioRef} src={currentSong.preview_url}></audio>
     </div>
   );
 };
