@@ -4,7 +4,7 @@ This is a React-based music player application that fetches song recommendations
 
 ### Installation
 
-Live Demo: 
+Live Demo: https://wave-music-player-demo.netlify.app/
 
 ## Features
 
