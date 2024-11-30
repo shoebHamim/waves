@@ -76,8 +76,7 @@ const Player = ({ audioRef, songs, currentSong, isPlaying, setIsPlaying, setCurr
 
       <div className="time-control">
         <p>{parseInt(songInfo.currentTime / 60)}:{("0" + (Math.floor(songInfo.currentTime) % 60)).slice(-2)}</p>
-        <div className="track" style={{ background: `linear-gradient(to right,,)` }}>
-
+        <div className="track" style={{ background: `gray` }}>
           <input onChange={dragHandler} min={0}
             max={songInfo.duration ? songInfo.duration : 0}
             value={songInfo.currentTime} type="range" />
