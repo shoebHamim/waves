@@ -1,10 +1,10 @@
-# Music Player App
+# Waves
 
 This is a React-based music player application that fetches song recommendations from the Spotify API and allows users to play, pause, and navigate through songs.
 
-### Installation
+### Live Demo:
 
-Live Demo: https://wave-music-player-demo.netlify.app/
+https://wave-music-player-demo.netlify.app/
 
 ## Features
 
